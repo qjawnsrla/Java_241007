@@ -4,12 +4,19 @@ package Arrarys클래스;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
 public class ArraysClassEx {
     public static void main(String[] args) {
         sortAndSearchFunc();
         System.out.println();
         sortAndSearchFunc2();
+        System.out.println();
+        sortComparatorFunc();
+        System.out.println();
+
+        Integer[] array = {5,4,7,9,13,3,1,88,23};
+        List<Integer> list = Arrays.asList(array);  // 배열을 리스트로 변환하는 메소드
     }
     // 정렬과 검색
     static void sortAndSearchFunc() {
@@ -45,8 +52,11 @@ public class ArraysClassEx {
 
             @Override
             public int compare(Integer o1, Integer o2) {
-                return 0;
+                if (o1 > o2) return 1;  // 양수가 넘어가면 정렬
+                return -1;
             }
         });
+
+        for (int e : array3) System.out.print(e + " ");
     }
 }
