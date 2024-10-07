@@ -3,12 +3,19 @@ package Wrapper클래스;
 
 public class WrapClassEx {
     public static void main(String[] args) {
-        IntegerEx integerEx = new IntegerEx();
-        integerEx.x = 100;
-        System.out.println(integerEx.x);
+        // Boxing : 기본 타입을 참조 타입 내에 넣는 것 ( 객체에 기본 타입을 집어넣는 것 )
+        Integer x = 100;    // Auto Boxing
+        int xx = x;     // Auto Unboxing
+
+//        IntegerEx integerEx = new IntegerEx();
+//        integerEx.x = 100;
+//        System.out.println(integerEx.x);
     }
 }
 
 class IntegerEx {
     int x;
+    IntegerEx(int x) {
+        this.x = x;
+    }
 }
